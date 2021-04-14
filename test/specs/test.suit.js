@@ -8,7 +8,6 @@ describe('My Login application', () => {
         MainPage.logInButton.click()
         Authorize.login(RandomValue.generateEmailAddress,RandomValue.generatePassword)
         expect(browser).toHaveUrl('https://www.sbzend.ssls.com/authorize');
-       
     });
 });
 
