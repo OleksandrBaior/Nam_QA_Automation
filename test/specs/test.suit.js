@@ -46,20 +46,22 @@ describe('My Login application', () => {
         Authorize.loginButton.click()
         UserPage.useremail.click()
         UserPage.dropdownProfile.click()
-
 // Save values to a variable(Do not change saved values) of such fields in Profile - Name, Email, Phone, Address, Support Pin
-    let valuesProfile = [];
-
-    valuesProfile.push(ProfilePage.name.getText())
-    valuesProfile.push(ProfilePage.email.getText())
-    valuesProfile.push(ProfilePage.address.getText())
-    valuesProfile.push(ProfilePage.phone.getText())
-    valuesProfile.push(ProfilePage.supportPin.getText())
-
-    console.log('eeeeeeeeeeeeeeeeeeee'+ valuesProfile)
-    })
-
-
+        let valuesProfile = [];
+        valuesProfile.push(ProfilePage.name.getText())
+        valuesProfile.push(ProfilePage.email.getText())
+        valuesProfile.push(ProfilePage.phone.getText())
+        valuesProfile.push(ProfilePage.address.getText())
+        valuesProfile.push(ProfilePage.supportPin.getText())
+// After click on "Profile" opened page "Profile" should be displayed
+        expect(browser).toHaveUrl('https://www.sbzend.ssls.com/user/profile')
+// Check that opened page has to contain values in the next fields and compare with values saved to variable from precondition
+        expect(ProfilePage.name).toHaveText(valuesProfile[0])
+        expect(ProfilePage.email).toHaveText(valuesProfile[1])
+        expect(ProfilePage.phone).toHaveText(valuesProfile[2])
+        expect(ProfilePage.address).toHaveText(valuesProfile[3])
+        expect(ProfilePage.supportPin).toHaveText(valuesProfile[4])
+    });
 });
 
 
