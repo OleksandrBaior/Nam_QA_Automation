@@ -1,8 +1,8 @@
 class Authorize {
     // Application credentials:
 
-    get email() { return  'ssls.automation+666@gmail.com'}
-    get password() {return  '123456'}
+    get email() { return 'ssls.automation+666@gmail.com'}
+    get password() {return '123456'}
     /**
      * define selectors using getter methods
      */
