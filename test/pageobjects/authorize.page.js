@@ -1,5 +1,8 @@
-
 class Authorize {
+    // Application credentials:
+
+    get email() { return  'ssls.automation+666@gmail.com'}
+    get password() {return  '123456'}
     /**
      * define selectors using getter methods
      */
@@ -12,15 +15,27 @@ class Authorize {
     get loginButton() { 
         return $('//*[@id="ng-app"]/body/div[1]/div/ui-view/div/ng-include/div/div/form/div[3]/button') 
     }
+    get eyeButton() {
+        return $('//*[@id="ng-app"]/body/div[1]/div/ui-view/div/ng-include/div/div/form/div[2]/div/div[1]/div[2]/button')
+    }
+    get allert() {
+        return $('//*[contains(text(),"Uh oh! Email or password is incorrect")] ')
+    }
+
+
+
+
+
+
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    login (username, password) {
-        this.inputEmail.setValue(username);
+    login (email, password) {
+        this.inputEmail.setValue(email);
         this.inputPassword.setValue(password);
         browser.pause(3000)
-        this.loginButton.click(); 
     }
   
 }
