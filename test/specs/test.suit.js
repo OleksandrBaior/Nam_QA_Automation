@@ -5,7 +5,7 @@ const UserPage = require('../pageobjects/user.page');
 const ProfilePage = require('../pageobjects/profile.page');
 
 describe('My Login application', () => {
-    xit('Authorization page. Not registered user TEST_CASE_1', () => {
+    it('Authorization page. Not registered user TEST_CASE_1', () => {
 // open main page
         MainPage.open()
         MainPage.logInButton.click()
@@ -21,7 +21,7 @@ describe('My Login application', () => {
         expect(Authorize.allert).toBeDisplayed()
     });
 
-    xit('Authorization page (Welcome back!) TEST_CASE_2', () => {
+    it('Authorization page (Welcome back!) TEST_CASE_2', () => {
 //open main page
         MainPage.open()
         MainPage.logInButton.click()
