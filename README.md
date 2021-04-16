@@ -10,6 +10,10 @@ Installation#
 Use npm to install the WebdriverIO test runner in your Node.js project. See system requirements:
 npm install @wdio/cli
 
+Install
+npm install generate-password --save
+npm install --save random-email
+
 Run Test#
 You can start your test suite by using the run command and pointing to the WebdriverIO config that you just created:
 npx wdio run ./wdio.conf.js
